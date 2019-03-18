@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Farm biodynamic module.
+ */
+
+/**
+ * Implements hook_farm_flags().
+ */
+function farm_biodynamic_farm_flags() {
+  return array(
+    'biodynamic' => t('Biodynamic'),
+  );
+}
+
+/**
+ * Implements hook_farm_flags_classes_alter().
+ */
+function farm_biodynamic_farm_flags_classes_alter($flag, &$classes) {
+
+  // If the flag is 'biodynamic', add the Bootstrap 'primary' button class.
+  if ($flag == 'biodynamic') {
+    $classes[] = 'btn-primary';
+  }
+}

@@ -1,0 +1,5 @@
+name = Farm Biodynamic
+description = Provides a flag for marking records as "Biodynamic" in farmOS.
+core = 7.x
+package = farmOS Contrib
+dependencies[] = farm_flags
